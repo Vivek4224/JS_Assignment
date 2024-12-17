@@ -1,0 +1,43 @@
+What is the use of Void (0)? 
+ans:- In JavaScript, void is an operator used to evaluate an expression without returning a value. It essentially "voids" the result of the expression, meaning it does not return anything — it always returns undefined.
+
+# Syntax:
+
+void(expression)
+expression: This is any valid JavaScript expression you want to evaluate.
+The void operator will discard the result of the expression and return undefined.
+
+# Common Usage: void(0)
+The most common usage of void(0) is in situations where you want to prevent the default behavior (such as page reload, navigating to a link, or submitting a form) but you don't want the expression to return anything.
+
+# In the context of HTML Links:
+When you use void(0) in an anchor (<a>) tag, it prevents the link from navigating to a new page or reloading the current page. It essentially keeps the link from doing anything, but allows you to execute JavaScript without causing a page refresh or redirect.
+
+#Example:
+
+<a href="javascript:void(0)" onclick="alert('Hello World')">Click Me</a>
+
+# In this example:
+
+The href="javascript:void(0)" ensures that the link does not navigate to another page or reload the current page when clicked.
+Instead, the onclick event handler triggers a JavaScript alert (alert('Hello World')), and no page navigation occurs.
+
+# Why Use void(0)?
+
+1.Preventing Page Reloads or Navigation:
+
+When using JavaScript inside an anchor tag (<a>), the default behavior is to navigate to the URL specified in the href attribute. Using void(0) ensures that clicking the link does not cause a page reload or navigate to a different page.
+
+2. Executing Code Without Returning a Value:
+
+The void operator can be used when you want to evaluate an expression (like a function call), but you do not care about the return value. For example, in event handlers or in links that trigger JavaScript but don't need to return anything to the browser.
+
+# Example:
+
+<a href="javascript:void(0);" onclick="console.log('Link clicked!')">Click me</a>
+The link doesn’t cause any page navigation, and clicking it just prints "Link clicked!" to the console.
+
+# Summary:
+void(0) is commonly used in JavaScript to evaluate an expression but prevent it from returning any value (specifically returning undefined).
+It is widely used in HTML anchor tags (<a>) to prevent the page from reloading or navigating while still executing JavaScript code.
+Essentially, void(0) is used when you need to perform an action (like executing a function) without affecting the page's behavior (like redirecting or refreshing).

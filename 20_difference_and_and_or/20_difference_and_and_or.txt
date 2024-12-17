@@ -1,0 +1,76 @@
+What is the difference between && and || in JavaScript ?
+ans:- In JavaScript, && (AND) and || (OR) are logical operators that are used to combine multiple conditions. They are essential for making decisions in code based on different conditions.
+
+1. Logical AND (&&) Operator:
+The && operator is the logical AND operator. It returns true if both conditions or expressions on either side of the operator are true. If any one condition is false, the result will be false.
+
+# Syntax:
+condition1 && condition2
+
+# Behavior:
+If both conditions are true, the result is true.
+If either condition is false, the result is false.
+
+# Example:
+
+let x = 5;
+let y = 10;
+console.log(x > 0 && y < 20);  // true  (Both conditions are true)
+console.log(x > 0 && y > 20);  // false (y > 20 is false)
+console.log(x < 0 && y < 20);  // false (x < 0 is false)
+
+
+2. Logical OR (||) Operator:
+The || operator is the logical OR operator. It returns true if at least one of the conditions or expressions on either side of the operator is true. If both conditions are false, the result will be false.
+
+# Syntax:
+
+condition1 || condition2
+
+# Behavior:
+If either condition is true, the result is true.
+If both conditions are false, the result is false.
+
+# Example:
+
+let x = 5;
+let y = 10;
+console.log(x > 0 || y < 20);  // true  (x > 0 is true, so the result is true)
+console.log(x > 0 || y > 20);  // true  (x > 0 is true, so the result is true)
+console.log(x < 0 || y > 20);  // false (Both conditions are false)
+
+# Key Differences:
+
+| Aspect | && (AND) | || (OR) | |-------------------------|----------------------------------------------|---------------------------------------------| | Return Value | Returns true if both conditions are true, otherwise false. | Returns true if at least one condition is true, otherwise false. | | Short-circuiting | If the first condition is false, the second condition is not evaluated (since the result will be false anyway). | If the first condition is true, the second condition is not evaluated (since the result will be true anyway). | | Example 1 | x > 0 && y < 10 (both must be true) | x > 0 || y < 10 (at least one must be true) | | Example 2 | x < 0 && y > 0 (both must be true) | x < 0 || y > 0 (at least one must be true) | | Use Case | Used when you want all conditions to be true. | Used when you want at least one condition to be true. |
+
+# Short-circuiting Behavior:
+
+AND (&&): If the first condition is false, JavaScript will not evaluate the second condition because, for the AND operator, the result will already be false (e.g., false && anything is always false).
+
+OR (||): If the first condition is true, JavaScript will not evaluate the second condition because, for the OR operator, the result will already be true (e.g., true || anything is always true).
+
+# Examples of Short-circuiting:
+
+let x = 5;
+let y = 10;
+
+console.log(x > 0 && y < 20);  // true, both are true, so the second condition is evaluated
+console.log(x > 0 && y > 20);  // false, second condition is false, so short-circuits
+
+console.log(x > 0 || y > 20);  // true, first condition is true, so the second condition is not evaluated
+console.log(x < 0 || y > 20);  // false, both conditions are false, so both are evaluated
+
+# Use Cases:
+
+&& (AND) is commonly used when you want all conditions to be true before taking an action, like:
+Checking if a user is logged in and if they have access to a page.
+Validating multiple form fields.
+
+|| (OR) is commonly used when you want at least one condition to be true, like:
+Checking if a user is logged in or if they are using a guest account.
+Allowing access if any one of several conditions is met.
+
+# Summary:
+
+&& (AND): Returns true if both conditions are true.
+|| (OR): Returns true if at least one condition is true.

@@ -1,0 +1,61 @@
+What is the use of is NaN function?
+ans:- The isNaN() function is a built-in JavaScript function that is used to check if a value is NaN (Not-a-Number). In other words, it checks whether a value is not a valid number.
+
+# Syntax:
+isNaN(value)
+value: The value that you want to check.
+
+# Return Value:
+true: If the value is NaN (Not-a-Number).
+false: If the value is a valid number or can be converted into a valid number.
+
+# How does isNaN() work?
+The function first tries to convert the provided value into a number. If it cannot be converted to a valid number, it returns true (indicating that the value is NaN). If the value can be converted into a valid number, it returns false.
+
+# Examples:
+1. Checking for NaN directly:
+
+console.log(isNaN(123));        // false (123 is a valid number)
+console.log(isNaN('hello'));    // true (string 'hello' cannot be converted to a number)
+console.log(isNaN(NaN));        // true (NaN is not a number)
+console.log(isNaN(true));       // false (true is converted to 1, which is a valid number)
+
+2. Checking strings and other values:
+console.log(isNaN('123'));      // false ('123' can be converted to the number 123)
+console.log(isNaN('123abc'));   // true ('123abc' cannot be converted to a number)
+console.log(isNaN(undefined));  // true (undefined cannot be converted to a number)
+console.log(isNaN(null));       // false (null is converted to 0, which is a valid number)
+
+3. With non-numeric values:
+
+console.log(isNaN({}));        // true (an object cannot be converted to a number)
+console.log(isNaN([]));        // false (an empty array is converted to 0, a valid number)
+console.log(isNaN([1,2,3]));   // true (an array with values can't be converted to a single number)
+
+# Important Points to Understand:
+
+NaN (Not-a-Number) is a special value in JavaScript that represents a value that is not a legal number. For example, dividing 0/0 or attempting to parse a non-numeric string into a number results in NaN.
+
+isNaN() is sometimes considered a bit tricky because it first tries to convert the value to a number before checking if it's NaN, which can lead to unexpected results.
+
+For better type safety, it's often recommended to use Number.isNaN(), which does not perform type coercion and checks directly if a value is exactly NaN.
+
+# Difference between isNaN() and Number.isNaN():
+
+isNaN(): Tries to convert the value into a number before checking if it's NaN.
+# Example: isNaN('123') returns false because '123' can be converted to a number.
+
+Number.isNaN(): Does not perform type coercion. It checks if the value is exactly the NaN value.
+# Example: Number.isNaN('123') returns false, because '123' is a string, not NaN.
+
+# Example of Number.isNaN() Usage:
+
+console.log(Number.isNaN('123'));       // false
+console.log(Number.isNaN(NaN));         // true
+console.log(Number.isNaN(123));         // false
+console.log(Number.isNaN('hello'));     // false (this is not NaN)
+
+#Summary:
+The isNaN() function is used to check if a value is Not-a-Number (NaN).
+It first attempts to convert the value to a number before checking, so it can sometimes give unexpected results with non-numeric values.
+For a more precise check for NaN, it's recommended to use Number.isNaN(), which does not perform type coercion.
