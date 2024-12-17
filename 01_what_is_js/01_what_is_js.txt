@@ -1,0 +1,4 @@
+What is JavaScript. How to use it? 
+ans:- JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions. It also enables users to load content into a document without reloading the entire page.
+
+JavaScript એ વેબ પેજીસ develop કરવા માટે વપરાતી સ્ક્રિપ્ટીંગ language છે. નેટસ્કેપમાં Developed, JS developers અને visitors સાથે ક્રિયાપ્રતિક્રિયા કરવા અને જટિલ ક્રિયાઓ કરવા માટે ગતિશીલ અને ઇન્ટરેક્ટિવ વેબ પૃષ્ઠ બનાવવાની મંજૂરી આપે છે. તે વપરાશકર્તાઓને સમગ્ર પૃષ્ઠને ફરીથી લોડ કર્યા વિના દસ્તાવેજમાં સામગ્રી લોડ કરવા માટે પણ સક્ષમ કરે છે.

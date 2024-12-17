@@ -1,0 +1,100 @@
+What is Condition Statement? 
+ans:- A Condition Statement (also called a Conditional Statement) is a programming construct that allows the execution of certain code based on whether a condition (or set of conditions) is true or false. It helps control the flow of a program by deciding which code block to execute depending on specific conditions. 
+
+1. If Statement: It is used to execute a block of code only if a specified condition is true.
+
+# Syntax
+
+if (condition) {
+  // Code to be executed if condition is true
+}
+
+
+# Example
+
+let age = 18;
+if (age >= 18) {
+  console.log("You are an adult.");
+}
+
+
+2. If-Else Statement: It executes one block of code if the condition is true, and a different block if the condition is false.
+
+# Syntax
+
+if (condition) {
+  // Code to be executed if condition is true
+} else {
+  // Code to be executed if condition is false
+}
+
+
+
+# Example
+
+let age = 15;
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a minor.");
+}
+
+
+3. Else If Statement: It allows checking multiple conditions. If the first condition is false, it checks the next one.
+
+# Syntax
+
+if (condition1) {
+  // Code to be executed if condition1 is true
+} else if (condition2) {
+  // Code to be executed if condition2 is true
+} else {
+  // Code to be executed if neither condition1 nor condition2 is true
+}
+
+
+# Example
+
+let age = 70;
+if (age < 18) {
+  console.log("You are a minor.");
+} else if (age >= 18 && age < 60) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a senior.");
+}
+
+
+2. Switch Statement: It is used to check multiple conditions based on the value of a single expression.
+
+# Syntax
+
+switch(expression) {
+  case value1:
+    // Code to be executed if expression equals value1
+    break;
+  case value2:
+    // Code to be executed if expression equals value2
+    break;
+  default:
+    // Code to be executed if no case matches
+}
+
+
+# Example
+
+let day = 3;
+switch(day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  default:
+    console.log("Invalid day");
+}
+

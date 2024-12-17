@@ -1,0 +1,82 @@
+Define a Data Types in js?
+ans:- Each value in a JavaScript program is associated with a data type. A data type specifies the type of data Number, String, Boolean, Double, etc. Each data type requires different amounts of memory and has some specific operations which can be performed over it. The data types in JavaScript can be categorized into two types.
+
+## Primitive Data Type:- A primitive data type is a basic type of data that is defined by the programming language and is not composed of other data types. These data types serve as the building blocks for creating more complex data structures and operations in programming.
+
+1. Number:- Numbers are always stored in double-precision 64-bit binary format IEEE 754. In JavaScript, there are no separate types of integers and floating point.
+
+# Example
+
+let age = 25;
+let price = 19.99;
+
+2. String:- Strings are made up of a list of characters, essentially an array of characters. There is no separate type of characters. A single character is also a string.
+
+# Example
+
+let name = "John Doe";
+
+3. Boolean:- Represents a logical entity and can have two values: true or false.
+
+# Example 
+
+let isActive = true;
+let hasPermission = false;
+
+
+4. Null:- This type has only one value: null.
+
+# Example
+
+let car = null;
+
+
+5. Undefined:-	A variable that has not been assigned a value is undefined.
+
+# Example
+
+let user;
+console.log(user);  // undefined
+
+6. Symbol:- Symbols return unique identifiers that can be used as property keys in objects without colliding with other keys.
+
+# Example
+
+let sym = Symbol('description');
+
+
+7. BigInt:- BigInt is a built-in object providing a way to represent whole numbers larger than 253-1.
+
+# Example
+let bigNumber = 1234567890123456789012345678901234567890n;
+
+
+## Non-Primitive Data Type:- Non-primitive data types (also known as reference types) are data types that are more complex than primitive data types. They are not predefined by the programming language and can be built from primitive types or other non-primitive types. These types usually represent collections of data or objects and are stored as references to memory locations rather than directly holding the actual data.
+
+1. Object:- An object is a collection of key-value pairs, where the key is a string (or symbol) and the value can be any type of data (including another object).
+
+# Example
+
+let person = {
+  name: "John",
+  age: 30,
+  address: {
+    city: "New York",
+    zip: 10001
+  }
+};
+
+2. Array:- An array is a special type of object used to store ordered collections of values. Arrays can store multiple values, including objects, numbers, strings, and other arrays.
+
+# Example
+
+let fruits = ["apple", "banana", "cherry"];
+
+3. Function:- A function in JavaScript is also considered a non-primitive data type. Functions are objects, so they are passed by reference.
+
+# Example
+
+function greet() {
+  console.log("Hello!");
+}
+
