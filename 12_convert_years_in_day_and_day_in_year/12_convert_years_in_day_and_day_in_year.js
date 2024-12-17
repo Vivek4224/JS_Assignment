@@ -12,9 +12,9 @@ function DayTOYear(days){
 
 let days = 250;
 let yearFromDay = DayTOYear(days)
-console.log(`the year is ${yearFromDay.toFixed(1)}`)
+console.log(`the year is ${yearFromDay.toFixed(1)}`);
 
 let year = 5
 let dayFromYear = YearToDay(year)
-console.log(`the day is ${dayFromYear}`)
+console.log(`the day is ${dayFromYear}`);
 

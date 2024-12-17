@@ -4,4 +4,4 @@ function celsius(fahrenheit){
 
 let f = 32
 let c = celsius(f)
-console.log(`fahrenheit convert in celsius is ${c.toFixed(2)}`)
+console.log(`fahrenheit convert in celsius is ${c.toFixed(2)}`);
